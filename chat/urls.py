@@ -7,6 +7,6 @@ from . import views
 from .views import Login
 
 urlpatterns = [
-    # path('', views.index, name='index'),
-    # path('room/', views.room, name='room'),
+    path('', views.index, name='index'),
+    path('room/<str:room_name>/', views.room, name='room'),
 ]

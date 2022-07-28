@@ -9,14 +9,14 @@ from chat.models import User
 from chat.serializers import MyTokenObtainPairSerializer, UserSerializer
 
 
-# def index(request):
-#     return render(request, 'chat/index.html')
-#
-#
-# def room(request):
-#     return render(request, 'chat/room.html', {
-#         'room_name': 'room'
-#     })
+def index(request):
+    return render(request, 'chat/index.html')
+
+
+def room(request, room_name):
+    return render(request, 'chat/room.html', {
+        'room_name': room_name
+    })
 
 
 class Login(TokenObtainPairView):
