@@ -25,5 +25,5 @@ django.setup()
 application = ProtocolTypeRouter({
     "http": get_asgi_application(),
     # "websocket": JWTTokenAuthMiddleware(URLRouter(chat.routing.websocket_urlpatterns)),
-    "websocket": AllowedHostsOriginValidator(AuthMiddlewareStack(URLRouter(chat.routing.websocket_urlpatterns))),
+    "websocket": AuthMiddlewareStack(URLRouter(chat.routing.websocket_urlpatterns)),
 })

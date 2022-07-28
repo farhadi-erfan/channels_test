@@ -1,8 +1,6 @@
 import json
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import JsonWebsocketConsumer, WebsocketConsumer
-from notifications.models import Notification
-from notifications.signals import notify
 
 from chat.models import User
 from chat.serializers import NotificationSerializer
